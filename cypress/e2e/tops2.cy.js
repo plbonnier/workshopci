@@ -2,10 +2,8 @@ describe('tops', () => {
 
     it('tops', () => {
         cy.visit('https://magento.softwaretestingboard.com/');
-        cy.get('#ui-id-4').trigger('mouseover');
-        // cy.get('#ui-id-4').click();
-        cy.get('#ui-id-9').click();
-        // cy.get('.narrow-by-list2 a').first().click();
+        cy.get('#ui-id-4').click();
+        cy.get('#narrow-by-list2 a').first().click();
         cy.url().should('include', '/women/tops-women.html');
         cy.get('h1.page-title').should('contain', 'Tops');
         cy.get('img.product-image-photo').first().click();
